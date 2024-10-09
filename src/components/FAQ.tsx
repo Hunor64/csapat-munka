@@ -16,8 +16,8 @@ const FAQ = (props: FAQProp) => {
         <h1>{props.question}</h1>
       </div>
       <p style={{
-        // height: isOpen ? Math.floor(props.answer.length/50) + "em" : 0
-        height: isOpen ? "200px" : 0
+        height: isOpen ? (Math.floor(props.answer.length / 50)*2 + 2 )+ "rem" : 0
+        //height: isOpen ? "200px" : 0
       }}>
         {props.answer}
       </p>
