@@ -1,7 +1,9 @@
+import FAQ from './components/FAQ'
 const App = () => {
   return (
-    <div>
-      
+    <div> 
+      <FAQ question='Miért vannak dolgok?' answer='Csak'/>
+      <FAQ question='Hány?' answer='Csak'/>
     </div>
   )
 }
