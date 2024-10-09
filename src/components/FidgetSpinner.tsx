@@ -4,7 +4,7 @@ const FidgetSpinner = () => {
 
     const handleClick = () => {
         setSpinning(true);
-        setTimeout(() => setSpinning(false), 1000);
+        setTimeout(() => setSpinning(false), 10000);
     };
 
     return (
@@ -13,7 +13,7 @@ const FidgetSpinner = () => {
             src="./src/spina.pgn"
             onClick={handleClick}
             style={{
-                animation: spinning ? 'spin 1s linear' : 'none'
+                animation: spinning ? 'spin 10s linear' : 'none'
             }}
         >
 
