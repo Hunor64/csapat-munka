@@ -15,11 +15,14 @@ const FAQ = (props: FAQProp) => {
         <button onClick={toggle}>⌄</button>
         <h1>{props.question}</h1>
       </div>
-      <p className={isOpen ? "open" :""}>
+      <p style={{
+        // height: isOpen ? Math.floor(props.answer.length/50) + "em" : 0
+        height: isOpen ? "200px" : 0
+      }}>
         {props.answer}
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default FAQ;
+export default FAQ
