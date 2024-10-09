@@ -15,7 +15,9 @@ const FAQ = (props: FAQProp) => {
         <button onClick={toggle}>⌄</button>
         <h1>{props.question}</h1>
       </div>
-      {isOpen ? <p>{props.answer}</p> : <></>}
+      <p className={isOpen ? "open" :""}>
+        {props.answer}
+      </p>
     </div>
   );
 };

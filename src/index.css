@@ -12,5 +12,15 @@
 
   background-color: aliceblue;
   color: black;
+  p{
+    transition: 1s;
+    height: 0px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  p.open{
+    height: 200px;
+  }
 
 }
