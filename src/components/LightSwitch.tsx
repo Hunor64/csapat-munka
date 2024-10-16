@@ -1,10 +1,12 @@
-import { useState } from "react"
+import { useContext } from "react"
+import { ModeContext } from "../App"
 
 const LightSwitch = () => {
-    const [isDark, setIsDark] = useState(false)
+  const ctx = useContext(ModeContext)
+
   return (
-    <div className="switch" onClick={()=> setIsDark(!isDark)}>
-            <div className={isDark ? "isDark" : ""}></div>
+    <div className="switch" onClick={() =>ctx?.setMode(!ctx?.mode)}>
+      <div className={ctx?.mode ? "isDark" : ""}></div>
     </div>
   )
 }
