@@ -1,15 +1,25 @@
 // import FAQ from './components/FAQ'
 // import FidgetSpinner from './components/FidgetSpinner'
-import Modal from './components/Modal'
+// import Modal from './components/Modal'
+
+import React, { createContext, useState } from "react"
+import LightSwitch from "./components/LightSwitch"
+
+type ModeContextType = {
+  mode: boolean
+  setMode: React.Dispatch<React.SetStateAction<boolean>>
+}
+const ModeContext = createContext<ModeContextType | undefined>(undefined)
 
 const App = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
   return (
-    <div> 
-      {/* <FAQ question='Miért vannak dolgok?' answer='Csak'/>
-      <FAQ question='Hány?' answer='Csak'/>
-      <FidgetSpinner/> */}
-      <Modal/>
-    </div>
+    <ModeContext.Provider value={{ mode: isDarkMode, setMode: setIsDarkMode }}>
+      <div>
+        <LightSwitch />
+      </div>
+    </ModeContext.Provider>
   )
 }
 
