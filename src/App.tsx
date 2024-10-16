@@ -9,7 +9,6 @@ type ModeContextType = {
   mode: boolean
   setMode: React.Dispatch<React.SetStateAction<boolean>>
 }
-
 const ModeContext = createContext<ModeContextType | undefined>(undefined)
 
 const App = () => {
