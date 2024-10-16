@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <ModeContext.Provider value={{ mode: isDarkMode, setMode: setIsDarkMode }}>
-      <div>
+      <div className={"main" + (isDarkMode ? " dark" : "")}>
         <LightSwitch />
       </div>
     </ModeContext.Provider>

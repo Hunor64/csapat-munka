@@ -93,3 +93,19 @@ div.isDark{
   transform: translateX(calc(var(--switch-size) - 25px));
   background-color: gray;
 }
+body{
+  margin: 0;
+}
+.main{
+  background-color: skyblue ;
+  min-block-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+.main.dark{
+  background-color: darkblue;
+  color: white;
+}
